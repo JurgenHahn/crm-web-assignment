@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="https://necolas.github.io/normalize.css/5.0.0/normalize.css">
+    <link href="/styles.css" rel="stylesheet">
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <header>
+      <h1 class="logo">Bitmaker CRM</h1>
+      <nav class="nav-menu">
+        <a href="/"><p class="nav-item">Home</p></a>
+        <a href="/contacts/new"><p class="nav-item">Add a contact</p></a>
+        <a href="/about"><p class="nav-item">About</p></a>
+      </nav>
+    </header>
+
+    <%= yield %>
+
+
+    <footer>
+      <p class="footer-text">&copy; Bitmaker 2016 <p>
+    </footer>
+  </body>
+</html>

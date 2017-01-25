@@ -1,0 +1,47 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  font-family: Helvetica;
+}
+
+header, h1 {
+  margin: 0;
+}
+
+.logo {
+  background-color: black;
+  color: white;
+  font-size: 30px;
+  font-weight: 600;
+  line-height: 2;
+  text-align: center;
+}
+
+.nav-item {
+  background-color: grey;
+  color: white;
+  font-size: 25px;
+  font-weight: 600;
+  line-height: 2;
+  margin: 1px 0;
+  text-align: center;
+}
+
+footer {
+  background-color: black;
+  color: white;
+  line-height: 5;
+  font-size: 12px;
+  text-align: center;
+  position:absolute;
+  bottom: 0;
+  width: 100%;
+
+}
+
+a {
+  text-decoration: none;
+}
