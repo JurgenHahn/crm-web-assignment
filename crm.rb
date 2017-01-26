@@ -1,5 +1,9 @@
+gem 'activerecord', '=4.2.7'
+require 'active_record'
+require 'mini_record'
 require_relative 'contact'
 require 'sinatra'
+
 
 
 # Contact.create('Mark', 'Zuckerberg', 'mark@facebook.com', 'CEO')
