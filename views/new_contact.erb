@@ -1,11 +1,34 @@
 
 
-<h1>Create new Contact</h1>
+<!-- <h1 class="form-heading">Create new Contact</h1> -->
 
-<form action='/contacts' method='post'>
-  <input type='text' name='first_name'>
-  <input type='text' name='last_name'>
-  <input type='text' name='email'>
-  <input type='text' name='note'>
-  <input type='submit' value='New Contact'>
+<form class="form" action='/contacts' method='post'>
+
+  <h1 class="form-heading">Create new Contact</h1>
+<table>
+  <tr>
+    <td><label for="f-name">First Name</label></td>
+    <td><input type='text' id="f-name" name='first_name'></td>
+  </tr>
+
+  <tr>
+    <td><label for="l-name">Last Name</label></td>
+    <td><input type='text' id="l-name" name='last_name'></td>
+  </tr>
+
+  <tr>
+    <td><label for="email">Email</label></td>
+    <td><input type='text' id="email" name='email'></td>
+  </tr>
+
+  <tr>
+    <td><label for="note">Notes</label></td>
+    <td><input type='text' id="note" name='note'></td>
+  </tr>
+
+  <tr>
+    <td class="button" colspan="2"><input  type='submit' value='New Contact'></td>
+  </tr>
+</table>
+
 </form>

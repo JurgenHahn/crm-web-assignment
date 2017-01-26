@@ -1,10 +1,32 @@
-<h1>Edit a Contact</h1>
+
 
 <form action='/contacts/<%= @contact.id %>' method='post'>
   <input type='hidden' name='_method' value='put'>
-  <input type='text' name='first_name' value='<%= @contact.first_name %>'>
-  <input type='text' name='last_name' value='<%= @contact.last_name %>'>
-  <input type='text' name='email' value='<%= @contact.email %>'>
-  <input type='text' name='note' value='<%= @contact.note %>'>
-  <input type='submit' value='Edit Contact'>
+
+  <h1 class="form-heading">Edit a Contact</h1>
+  <table>
+    <tr>
+      <td><label for="first_name">First Name</label></td>
+      <td><input type='text' id="first_name" name='first_name' value='<%= @contact.first_name %>'></td>
+    </tr>
+
+    <tr>
+      <td><label for="last_name">Last Name</label></td>
+      <td><input type='text' id="last_name" name='last_name' value='<%= @contact.last_name %>'></td>
+    </tr>
+
+    <tr>
+      <td><label for="email">Email</label></td>
+      <td><input type='text' id="email" name='email' value='<%= @contact.email %>'></td>
+    </tr>
+
+    <tr>
+      <td><label for="note">Note</label></td>
+      <td><input type='text' id="note" name='note' value='<%= @contact.note %>'></td>
+    </tr>
+
+    <tr>
+      <td class="button" colspan="2"><input type='submit' value='Edit Contact'></td>
+    </tr>
+  </table>
 </form>

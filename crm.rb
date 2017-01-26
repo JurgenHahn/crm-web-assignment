@@ -9,7 +9,7 @@ Contact.create('Betty', 'Maker', 'betty@bitmakerlabs.com', 'Developer')
 
 get '/' do
   @crm_app_name = "Bitmaker's CRM"
-  erb :index
+  erb :contacts
 end
 
 get '/contacts' do
@@ -51,6 +51,16 @@ put '/contacts/:id' do
     @contact.email = params[:email]
     @contact.note = params[:note]
 
+    redirect to('/contacts')
+  else
+    raise Sinatra::NotFound
+  end
+end
+
+delete '/contacts/:id' do
+  @contact = Contact.find(params[:id].to_i)
+  if @contact
+    @contact.delete
     redirect to('/contacts')
   else
     raise Sinatra::NotFound

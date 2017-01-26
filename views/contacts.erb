@@ -1,8 +1,8 @@
-<h1 class="contact-header">There are X Contacts</h1>
+<h1 class="contact-header">There are <span><%= Contact.all.count %></span> Contacts</h1>
 
 <ul>
 <% Contact.all.each do |contact| %>
-  <a href="/contacts/<%=contact.id%>"><li class="contact"><%= contact.first_name %> <%= contact.last_name %> (<%= contact.email %>)<br>
-  <a href="/contacts/<%=contact.id%>/edit" class="contact-links">Edit</a> | <a href="/delete" class="contact-links">Delete</a></li></a>
+  <li class="contact"><a href="/contacts/<%=contact.id%>"><%= contact.first_name %> <%= contact.last_name %></a> (<%= contact.email %>)<br>
+  <a href="/contacts/<%=contact.id%>/edit" class="first contact-links">Edit</a> | <a href="/delete" class="contact-links">Delete</a></li>
 <% end %>
 </ul>
